@@ -1,35 +1,33 @@
 export function Hero() {
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-navy-dark/80 z-10" />
-      
-      {/* Background image - dark upscale lounge */}
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/90 via-navy/70 to-navy z-10" />
+
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center scale-105"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=2000&q=80')`,
         }}
       />
 
       {/* Content */}
-      <div className="relative z-20 text-center px-6 max-w-4xl">
-        <h1 className="font-display text-6xl md:text-8xl tracking-wider text-gold mb-6">
+      <div className="relative z-20 text-center px-6 max-w-3xl fade-up">
+        <div className="section-divider mx-auto mb-8" />
+        <h1 className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-[0.15em] text-white font-light mb-8">
           BACKROOM
         </h1>
-        <p className="text-lg md:text-xl text-white/90 font-light tracking-wide max-w-2xl mx-auto">
+        <p className="text-base md:text-lg text-white/60 font-light tracking-wide leading-relaxed max-w-xl mx-auto">
           A private, curated room of founders, innovators, and decision-makers
           shaping business and culture.
         </p>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-10 z-20 animate-bounce">
-        <div className="w-[1px] h-12 bg-gold/60 mx-auto" />
+        {/* Scroll hint */}
+        <div className="mt-20">
+          <div className="w-px h-16 bg-gradient-to-b from-gold/60 to-transparent mx-auto" />
+        </div>
       </div>
-
-      {/* Gold accent block - top right */}
-      <div className="absolute top-0 right-0 w-16 h-24 bg-gold z-20 opacity-80" />
     </section>
   )
 }

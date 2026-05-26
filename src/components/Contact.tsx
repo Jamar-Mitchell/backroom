@@ -1,71 +1,65 @@
 export function Contact() {
   return (
-    <section className="relative py-24 px-6 md:px-16 lg:px-24 bg-navy">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+    <section className="py-32 px-6 md:px-16 lg:px-24 bg-navy-dark/30">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left - CTA */}
         <div>
-          <p className="text-sm text-white/50 mb-4">
-            Presented by{' '}
-            <span className="text-gold italic font-display">BackRoom</span>
-          </p>
-
-          <div className="w-12 h-[2px] bg-gold mb-6" />
-          <p className="text-gold font-display italic text-lg mb-4">BackRoom</p>
-
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-12 tracking-wide">
-            REQUEST MORE<br />INFORMATION
+          <div className="section-divider mb-8" />
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white font-light tracking-wide leading-tight mb-8">
+            Request<br />
+            <span className="text-gold">access</span>
           </h2>
+
+          <p className="text-white/50 text-sm leading-relaxed max-w-sm mb-12">
+            Interested in joining? Submit an inquiry and we'll be in touch.
+          </p>
 
           {/* RSVP Button */}
           <a
             href="https://form.typeform.com/to/VsSeEVzN"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-gold hover:bg-gold-light text-navy font-semibold px-10 py-4 text-lg tracking-wide transition-colors duration-300 mb-8"
+            className="inline-block bg-gold hover:bg-gold-light text-navy font-medium px-10 py-4 text-sm tracking-wider uppercase transition-all duration-300 hover:translate-y-[-1px] hover:shadow-lg hover:shadow-gold/20"
           >
-            RSVP NOW
+            Request Information
           </a>
 
           {/* Contact info */}
-          <div className="space-y-4 mt-8">
+          <div className="mt-14 space-y-4">
             <a
               href="mailto:INFO@BKRM.IO"
-              className="flex items-center gap-4 bg-gold/90 hover:bg-gold text-navy px-6 py-4 w-fit transition-colors duration-300"
+              className="flex items-center gap-3 text-white/40 hover:text-gold text-sm transition-colors duration-300"
             >
-              <span className="text-navy font-bold text-lg">›</span>
-              <span className="font-semibold tracking-wide">INFO@BKRM.IO</span>
+              <span className="w-4 h-px bg-gold" />
+              INFO@BKRM.IO
             </a>
             <a
               href="tel:7183447128"
-              className="flex items-center gap-4 bg-gold/90 hover:bg-gold text-navy px-6 py-4 w-fit transition-colors duration-300"
+              className="flex items-center gap-3 text-white/40 hover:text-gold text-sm transition-colors duration-300"
             >
-              <span className="text-navy font-bold text-lg">›</span>
-              <span className="font-semibold tracking-wide">718-344-7128</span>
+              <span className="w-4 h-px bg-gold" />
+              718-344-7128
             </a>
           </div>
         </div>
 
         {/* Right - Image */}
-        <div className="relative">
+        <div className="relative hidden lg:block">
           <div className="aspect-[4/5] rounded-sm overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1529543544006-1bd3f5466ae4?auto=format&fit=crop&w=800&q=80"
               alt="BackRoom event"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-70"
             />
-          </div>
-          {/* BKRM on wall overlay */}
-          <div className="absolute top-1/3 left-8 opacity-60">
-            <span className="font-display text-gold text-4xl tracking-widest font-bold">
-              BKRM
-            </span>
+            <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent" />
           </div>
         </div>
       </div>
 
       {/* Footer */}
-      <div className="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-center">
-        <p className="text-white/40 text-sm">
+      <div className="max-w-6xl mx-auto mt-32 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span className="font-display text-gold text-lg tracking-[0.3em]">BKRM</span>
+        <p className="text-white/20 text-xs tracking-wide">
           © {new Date().getFullYear()} BackRoom. All rights reserved.
         </p>
       </div>

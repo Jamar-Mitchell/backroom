@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #1B2A4A;
-  --color-navy-dark: #111D35;
-  --color-navy-light: #243757;
-  --color-gold: #C9A84C;
-  --color-gold-light: #D4BA6A;
-  --color-gold-dark: #A8893D;
-  --color-cream: #F5F0E8;
-  --font-display: 'Playfair Display', serif;
+  --color-navy: #0D1B2A;
+  --color-navy-dark: #080F1A;
+  --color-navy-light: #1B2D45;
+  --color-gold: #C8A951;
+  --color-gold-light: #E0C872;
+  --color-gold-dark: #9E8540;
+  --color-cream: #FAF8F5;
+  --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -29,4 +29,28 @@ body {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Section divider */
+.section-divider {
+  width: 48px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
 }
